@@ -9,6 +9,20 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    private func dataSet() {
+        let decoder = JSONDecoder()
+        if let dataAsset = NSDataAsset(name: "exposition_universelle_1900") {
+            do {
+                let myData = try decoder.decode(ExpoInfo.self, from: dataAsset.data)
+                print("디코딩 성공: \(myData)")
+            } catch {
+                print("디코딩 실패: \(error)")
+            }
+        } else {
+            print("Data Asset을 찾을 수 없음")
+        }
+    }
+    
     private let titleLabel = {
         let label = UILabel()
         return label
@@ -37,9 +51,16 @@ class MainViewController: UIViewController {
         return label
     }()
     
+    private let entryDetailViewControllerButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("한국의 출품작 보러가기", for: .normal)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        dataSet()
     }
 
     private func configureUI() {
