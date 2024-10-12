@@ -11,41 +11,16 @@ class MainViewController: UIViewController {
         }
     }
     
+    private lazy var titleLabel = makeLabel()
+    private lazy var visitorsLabel = makeLabel()
+    private lazy var locationLabel = makeLabel()
+    private lazy var durationLabel = makeLabel()
+    private lazy var descriptionLabel = makeLabel()
+    
     private let scrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
-    }()
-    
-    private let titleLabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private let visitorsLabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private let locationLabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private let durationLabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private let descriptionLabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0
-        return label
     }()
     
     private let entryDetailViewControllerButton = {
@@ -58,6 +33,13 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         dataSet()
+    }
+    
+    private func makeLabel() -> UILabel {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        return label
     }
     
     private func dataSet() {
