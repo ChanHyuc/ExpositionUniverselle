@@ -25,9 +25,15 @@ class MainViewController: UIViewController {
     
     private let entryDetailViewControllerButton = {
         let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("한국의 출품작 보러가기", for: .normal)
+        button.addTarget(self, action: #selector(didTapEntryDetailViewControllerButton), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func didTapEntryDetailViewControllerButton() {
+        navigationController?.pushViewController(EntryDetailViewController(), animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,12 +67,13 @@ class MainViewController: UIViewController {
         scrollView.addSubview(locationLabel)
         scrollView.addSubview(durationLabel)
         scrollView.addSubview(descriptionLabel)
+        scrollView.addSubview(entryDetailViewControllerButton)
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 15),
             scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -15),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
             titleLabel.topAnchor.constraint(equalTo: scrollView.topAnchor),
             titleLabel.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
@@ -83,8 +90,11 @@ class MainViewController: UIViewController {
             descriptionLabel.topAnchor.constraint(equalTo: durationLabel.bottomAnchor, constant: 10),
             descriptionLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             descriptionLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            descriptionLabel.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            descriptionLabel.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+            descriptionLabel.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            
+            entryDetailViewControllerButton.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 10),
+            entryDetailViewControllerButton.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            entryDetailViewControllerButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -10)
         ])
     }
 

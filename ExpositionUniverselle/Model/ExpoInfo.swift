@@ -5,3 +5,10 @@ struct ExpoInfo: Decodable {
     let duration: String
     let description: String
 }
+
+struct EntryInfo: Decodable {
+    let name: String
+    let image_name: String
+    let short_desc: String
+    let desc: String
+}
