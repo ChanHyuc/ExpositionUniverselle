@@ -32,13 +32,14 @@ class MainViewController: UIViewController {
     }()
     
     @objc private func didTapEntryDetailViewControllerButton() {
-        navigationController?.pushViewController(EntryDetailViewController(), animated: true)
+        navigationController?.pushViewController(EntryListViewController(), animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         dataSet()
+        navigationItem.backButtonTitle = "메인"
     }
     
     private func makeLabel() -> UILabel {

@@ -1,10 +1,10 @@
 import UIKit
 
-class EntryDetailTableViewCell: UITableViewCell {
+class EntryListTableViewCell: UITableViewCell {
     private lazy var nameLabel = makeLabel(fontSize: 20)
     private lazy var shortDescLabel = makeLabel(fontSize: 10)
     
-    private let entryimageView = {
+    private let entryImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleToFill
@@ -32,7 +32,7 @@ class EntryDetailTableViewCell: UITableViewCell {
     func configureCell(name: String, shortDesc: String, image: String) {
         nameLabel.text = name
         shortDescLabel.text = shortDesc
-        entryimageView.image = UIImage(named: image)
+        entryImageView.image = UIImage(named: image)
     }
     
     private func makeLabel(fontSize: CGFloat) -> UILabel {
@@ -45,15 +45,15 @@ class EntryDetailTableViewCell: UITableViewCell {
     
     private func configureUI() {
         addSubview(stackView)
-        addSubview(entryimageView)
+        addSubview(entryImageView)
         
         NSLayoutConstraint.activate([
             stackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.7),
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            stackView.leadingAnchor.constraint(equalTo: entryimageView.trailingAnchor),
-            entryimageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            entryimageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.3),
-            entryimageView.heightAnchor.constraint(equalTo: heightAnchor)
+            stackView.leadingAnchor.constraint(equalTo: entryImageView.trailingAnchor),
+            entryImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            entryImageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.3),
+            entryImageView.heightAnchor.constraint(equalTo: heightAnchor)
         ])
     }
     

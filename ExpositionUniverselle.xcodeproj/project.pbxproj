@@ -13,8 +13,9 @@
 		71337EF42CB5146200B84290 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71337EE52CB5146200B84290 /* SceneDelegate.swift */; };
 		71337EF52CB5146200B84290 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71337EEE2CB5146200B84290 /* MainViewController.swift */; };
 		71337EFA2CB5372100B84290 /* ExpoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71337EF92CB5372100B84290 /* ExpoInfo.swift */; };
-		71592F082CBA9D8900520191 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71592F072CBA9D8900520191 /* EntryDetailViewController.swift */; };
-		71592F0A2CBA9ECF00520191 /* EntryDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71592F092CBA9ECF00520191 /* EntryDetailTableViewCell.swift */; };
+		71592F082CBA9D8900520191 /* EntryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71592F072CBA9D8900520191 /* EntryListViewController.swift */; };
+		71592F0A2CBA9ECF00520191 /* EntryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71592F092CBA9ECF00520191 /* EntryListTableViewCell.swift */; };
+		718494E12CBCD92100D1CBC6 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718494E02CBCD92100D1CBC6 /* EntryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +26,9 @@
 		71337EEC2CB5146200B84290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71337EEE2CB5146200B84290 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		71337EF92CB5372100B84290 /* ExpoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoInfo.swift; sourceTree = "<group>"; };
-		71592F072CBA9D8900520191 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
-		71592F092CBA9ECF00520191 /* EntryDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailTableViewCell.swift; sourceTree = "<group>"; };
+		71592F072CBA9D8900520191 /* EntryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListViewController.swift; sourceTree = "<group>"; };
+		71592F092CBA9ECF00520191 /* EntryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewCell.swift; sourceTree = "<group>"; };
+		718494E02CBCD92100D1CBC6 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		718BD8AA2CAC3F9800A764C9 /* ExpositionUniverselle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpositionUniverselle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -54,7 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				71337EEE2CB5146200B84290 /* MainViewController.swift */,
-				71592F072CBA9D8900520191 /* EntryDetailViewController.swift */,
+				71592F072CBA9D8900520191 /* EntryListViewController.swift */,
+				718494E02CBCD92100D1CBC6 /* EntryDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -70,7 +73,7 @@
 		71337EE92CB5146200B84290 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				71592F092CBA9ECF00520191 /* EntryDetailTableViewCell.swift */,
+				71592F092CBA9ECF00520191 /* EntryListTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,9 +192,10 @@
 				71337EF32CB5146200B84290 /* AppDelegate.swift in Sources */,
 				71337EFA2CB5372100B84290 /* ExpoInfo.swift in Sources */,
 				71337EF42CB5146200B84290 /* SceneDelegate.swift in Sources */,
-				71592F082CBA9D8900520191 /* EntryDetailViewController.swift in Sources */,
+				71592F082CBA9D8900520191 /* EntryListViewController.swift in Sources */,
 				71337EF52CB5146200B84290 /* MainViewController.swift in Sources */,
-				71592F0A2CBA9ECF00520191 /* EntryDetailTableViewCell.swift in Sources */,
+				718494E12CBCD92100D1CBC6 /* EntryDetailViewController.swift in Sources */,
+				71592F0A2CBA9ECF00520191 /* EntryListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  ExpositionUniverselle
-//
-//  Created by ChanHyuc on 10/1/24.
-//
-
 import UIKit
 
 @main
